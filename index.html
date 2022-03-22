@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img class="imgbox" src="src/imgbox.png" align="right">
+        <div data-testid="textHeader" class="textHeader">
+            <p data-testid="p" class="pHeader">Formulário</p>
+            <p data-testid="p" class="pHeader">para compra de</p>
+            <p data-testid="p" class="fullWhiteP">Pacote de adesivos</p>
+        </div>
+      </div>
+      <form id="form" class="form">
+        <div class="form-control">
+            <h3>Quais Adesivos?</h3><br>
+            <input
+            type="checkbox"
+            id="adesivoReact"
+          />
+          <label for="chek">React</label>
+        </div>
+
+          <div class="form-control">
+            <input
+            type="checkbox"
+            id="adesivoVue"
+          />
+          <label for="chek">Vue</label>
+        </div>
+
+          <div class="form-control">
+            <input
+            type="checkbox"
+            id="adesivoAngular"
+          />
+          <label for="cheks">Angular</label>
+        </div> 
+    </form>
+        <div class="form-control2">
+
+            <h3>Quantos adesivos de cada ?</h3><br>
+
+            <input type="button" id="diminuir" value='-' onclick="process(-1)" />
+            <input type="text" name="contagem" class="text" id="contagem" size="1" value="0"  />
+            <input type="button" id="aumentar" value='+' onclick="process(1)">       
+            
+          
+          <p><br><h3><label>Observações:</label></h3></p>
+          <textarea class="obs" cols="40" rows="10" maxlength="1000" placeholder="Alguma dúvida? Recado? "></textarea><br>
+    
+
+          <input id="enviar" type="button" value="Enviar" onclick="enviar()">
+      </form>
+    </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/f9e19193d6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
